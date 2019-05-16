@@ -1,0 +1,109 @@
+@import "module/header.scss";
+@import "module/footer.scss";
+// @import "module/footer.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,ol{
+    list-style: none;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    font-size: 12px;
+    color: #684029;
+}
+
+.login-background{
+    width: 100%;
+    height: 100%;
+    // background: url(../img/passport-banner.jpg) no-repeat top center;
+
+    .content-box{
+        width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+
+        .form-login-box{
+            position: absolute;
+            width: 350px;
+            height: 360px;
+            top: 180px;
+            right: 0;
+            padding: 24px 34px;
+            border: 1px solid #E9E9E9;
+            background: #fff;
+
+            h2{
+                color: #482618;
+                text-align: center;
+                line-height: 25px;
+                cursor: pointer;
+                font-weight: 400;
+                margin-bottom: 20px;
+                margin-top: 10px;
+                font-size: 20px;
+                font-weight: normal;
+            }
+            ul{
+                li{
+                    margin: 12px auto;
+
+                    input{
+                        font-size: 12px;
+                        width: 280px;
+                        padding: 0 10px;
+                        height: 36px;
+                        border: 1px solid #efefef;
+                        border-radius: 2px;
+                        outline: 0;
+                        color: #442818;
+                        line-height: 38px;
+                    }
+                    .login-button{
+                        margin-top: 50px;
+                        display: block;
+                        background: #442818;
+                        border-radius: 2px;
+                        height: 48px;
+                        width: 280px;
+                        line-height: 48px;
+                        text-align: center;
+                        font-size: 18px;
+                        border: 0;
+                        cursor: pointer;
+                        color: #fff;
+                    }
+                   
+                }
+            }
+            .login-remember{
+                margin: 15px 0;
+                line-height: 18px;
+                label{
+                    display: block;
+                    float: left;
+                    cursor: pointer;
+                    font-weight: normal;
+                    input{
+                        position: relative;
+                        top: 2px;
+                        margin: 0 0 ;
+                    }
+                }
+                a{
+                    display: block;
+                    float: right;
+                    margin-left: 18px;
+                    color: #744f3a;
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+}

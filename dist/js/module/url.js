@@ -1,0 +1,1 @@
+"use strict";define(function(){return{rapBaseUrl:"http://rap2api.taobao.org/app/mock/166509/",phpBaseUrl:"http://localhost/DNF_online_api/api/"}});

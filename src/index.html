@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DNF周边商城</title>
+    <link rel="stylesheet" href="/libs/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header id="header-container"></header>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="/images/banner_1.jpg"></div>
+            <div class="swiper-slide"><img src="/images/banner_2.jpg"></div>
+            <div class="swiper-slide"><img src="/images/banner_3.jpg"></div>
+        </div>
+        <!--分页器 -->
+        <div class="swiper-pagination"></div>
+        
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+    <div class="main">
+        <div class="main-back">
+            <p><span class="sp1">典藏专区</span>&nbsp&nbsp&nbsp十年典藏，找寻专属你的典藏记忆<span class="sp2">更多</span></p>
+            <div class="main-img">
+                <img src="images/banner_4.jpg" alt="">
+            </div>
+            <div id="list-container" class="list-container">
+            </div>
+            <script type="text/html" id="list-monopoly">
+                <ul class="list-ul">
+                    {{each list item}}
+                        <li>
+                            <a href="/html/detail.html"><img src="{{item.image}}" alt=""></a>
+                            <p><a href="#">{{item.title}}</a></p>
+                            <p><span><a href="#">{{item.price}}</a></span></p>
+                        </li>
+                    {{/each}}
+                </ul>
+            </script>
+        </div>
+        <div class="main-after">
+            <div class="main-after-back">
+                <p><span class="sp1">精品推荐</span>&nbsp&nbsp&nbsp精选周边，酷炫来袭<span class="sp2">更多</span></p>
+                <a href="#"><img src="images/banner_4.jpg" alt=""></a>
+                <div id="list-container" class="list-container">
+                    <ul class="list-ul">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ul>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <footer id="footer-container"></footer>
+<script src="/libs/requirejs/require.js" data-main="/js/index"></script>
+</body>
+</html>

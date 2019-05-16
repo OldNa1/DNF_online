@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>商品详情</title><link rel="stylesheet" href="../css/detail.css"></head><body><header id="header-container"></header><div class="detail"><p class="pp"><span>首页</span>><span>礼包收藏</span>><span>典藏包</span></p><div class="partic" id="partic"><div class="zoom" id="zoom"></div><script type="text/html" id="detail-template"><div class="zoom_hei">
+                        <img class="hei_img" src="{{data.imgs[0]}}" data-zoom-image="{{data.imgs[0]}}"/>
+                    </div>
+                    <div class="zoom_low" id="gal1">
+                        <ul class="zoom_ul">
+                            <li class="current">
+                                <a href="#" data-image="{{data.imgs[0]}}" data-zoom-image="{{data.imgs[0]}}">
+                                    <img class="s" src="{{data.imgs[0]}}" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-image="{{data.imgs[1]}}" data-zoom-image="{{data.imgs[1]}}">
+                                <img class="s" src="{{data.imgs[1]}}" /></a>
+                            </li>
+                            <li>
+                                <a href="#" data-image="{{data.imgs[2]}}" data-zoom-image="{{data.imgs[2]}}">
+                                <img class="s" src="{{data.imgs[2]}}" /></a>
+                            </li>
+                            <li>
+                                <a href="#" data-image="{{data.imgs[3]}}" data-zoom-image="{{data.imgs[3]}}">
+                                <img class="s" src="{{data.imgs[3]}}" /></a>
+                            </li>
+                            <li>
+                                <a href="#" data-image="{{data.imgs[4]}}" data-zoom-image="{{data.imgs[4]}}">
+                                <img class="s" src="{{data.imgs[4]}}" /></a>
+                            </li>
+                        </ul>
+                    </div></script><div class="zoom_right" id="zoom_right"></div><script type="text/html" id="detail-template1"><h3>{{data.title}}</h3>
+                <p class="right_p">{{data.title1}}</p>
+                <div class="right_price">
+                    <p class="price_">{{data.price1}}<span>{{data.price2}}</span></p>
+                </div>
+                <div class="right_gift">
+                    <div class="gift_left">
+                        <p class="gift_left_p">赠品</p>
+                    </div>
+                    <div class="gift_right">新勇者礼包，天帝迷你尊享礼盒</div>
+                </div>
+                <div class="right_commit">
+                    <p class="commit_left">已售：<span>{{data.saleNum}}</span></p>
+                    <p class="commit_right">累计评价：{{data.comments}}</p>
+                    <div class="commit_right_">{{data.collection}}</div>
+                </div>
+                <div class="right_num">
+                    <p class="num_title">数量</p>
+                    <div class="num_text">
+                        <button class="num_reduce" id="num_reduce">-</button>
+                        <input type="text" class="num_input" id="num_input" value="1">
+                        <button class="num_add" id="num_add">+</button>
+                    </div>
+                    <p class="num_ready">（库存充足）</p>
+                </div>
+                <div class="right_btn">
+                    <button class="btn_left" id="add-car" data-id="{{data.id}}">加入购物车</button>
+                    <button class="btn_right">立即购买</button>
+                    <button class="btn_get">收藏</button>
+                </div></script></div></div><footer id="footer-container"></footer><script src="/libs/requirejs/require.js" data-main="../js/detail"></script></body></html>

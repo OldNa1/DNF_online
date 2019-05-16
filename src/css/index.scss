@@ -1,0 +1,196 @@
+@import "module/footer.scss";
+@import "module/header.scss";
+@import "../libs/bootstrap/css/bootstrap.min.css";
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/*    slide    */
+.swiper-container{
+    min-width: 1280px;
+    margin-top: 156px;
+    height: 365px;
+    overflow: hidden;
+    img{
+        width:100%;
+        height: 100%
+    }
+    span.swiper-pagination-bullet{
+        width: 14px;
+        height: 14px;
+        opacity: 1;
+        background: #fff;
+    }
+    span.swiper-pagination-bullet-active{
+        background: #007aff;
+    }
+}  
+#list-container{
+    width: 100%;
+    margin: 0 auto;
+    ul{
+        width: 100%;
+        margin-top: 40px;
+        display: flex;
+        li{
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 25%;
+            a{
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                overflow: hidden;
+                img{
+                    width: 80%;
+                    margin-top: 20px;
+                }
+            }
+            p{
+                margin-top: 20px;
+                display: inline-block;
+                height: 35px;
+                line-height: 35px;
+                font-size: 15px;
+                font-weight: bold;
+                color: #222;
+            }
+        }
+    }
+}
+// .slide ul li{
+//     height:500px;
+//     opacity: 0;
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     z-index: 0;
+//     transition: opacity 1s;
+// }
+// .slide ul li.ac{
+//     z-index: 5;
+//     opacity: 1;
+// }
+
+
+.main{
+    width: 100%;
+    height: 1342px;
+    background-color:#f5f5f5;
+    
+}
+.main .main-back{
+    width: 1181px;
+    height: 750px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.main .main-back p{
+    background: url(../images/more.png) no-repeat 1160px 25px;
+    background-size: 20px 20px;
+}
+.main .main-back p .sp1{
+    line-height: 60px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.main .main-back p .sp2{
+    float: right;
+    margin-right:22px;
+    line-height: 30px;
+    margin-top: 20px;
+}
+.main .main-back .main-img{
+    width: 1181px;
+    height: 200px;
+    background-color: aqua;
+}
+.main .main-back .list-container{
+    width: 1181px;
+    height: 365px;
+    margin-top: 75px;
+    .list-ul{
+        width: 1181px;
+        height: 365px;
+        display: flex;
+        justify-content: space-between;
+        li{
+           width: 278px;
+           height: 365px;
+           text-align: center;
+           a{
+                line-height: 16px;
+                text-decoration: none;
+           }
+           &:hover{
+                box-shadow: 0px 0px 5px  rgba(0, 0, 0, 0.5);
+           }
+        }
+
+    }
+}
+.main-after{
+    width: 100%;
+    height: 1000px;
+    background-color:#f5f5f5;
+}
+.main-after .main-after-back{
+    width: 1280px;
+    height:675px;
+    margin:0 auto;
+    background-color: #ffffff;
+}
+.main-after .main-after-back{
+    width: 1181px;
+    height: 675px;
+    
+}
+.main-after .main-after-back p{
+    background: url(../images/more.png) no-repeat 1160px 25px;
+    background-size: 20px 20px;
+}
+.main-after .main-after-back p .sp1{
+    line-height: 60px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.main-after .main-after-back p .sp2{
+    float: right;
+    margin-right:22px;
+    line-height: 30px;
+    margin-top: 20px;
+}
+.main-after .main-after-back .list-container{
+    width: 1181px;
+    height: 365px;
+    margin-top: 25px;
+    .list-ul{
+        width: 1181px;
+        height: 365px;
+        display: flex;
+        justify-content: space-between; 
+        li{
+            width: 278px;
+            height: 300px;
+            background-color: aqua;
+            text-align: center;
+            a{
+                line-height: 16px;
+                text-decoration: none;
+            }
+            &:hover{
+                box-shadow: 0px 0px 5px  rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+}
+

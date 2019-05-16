@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品列表</title>
+    <link rel="stylesheet" href="../css/list.css">
+</head>
+<body>
+    <header id="header-container"></header>
+    <div class="list">
+        <p class="pp"><span>首页</span>><span>礼包收藏</span>><span>典藏包</span></p>
+        <div class="list-all">
+            <div class="ul-1">
+                <ul>
+                    <li><a href="#">分类：</a></li>
+                    <li><a href="#">全部</a></li>
+                    <li><a href="#">衣服</a></li>
+                    <li><a href="#">礼包收藏</a></li>
+                    <li><a href="#">数码电子</a></li>
+                    <li><a href="#">日用配饰</a></li>
+                    <li><a href="#">手办</a></li>
+                </ul>
+            </div>
+            <div class="ul-2">
+                <ul>
+                    <li><a href="#">排序：</a></li>
+                    <li><a href="#">默认</a></li>
+                    <li><a href="#">价格</a></li>
+                    <li><a href="#">新品</a></li>
+                    <li><a href="#">人气</a></li>
+                    <li><a href="#">销量</a></li>
+                </ul>
+            </div>
+            <div class="ul-3">
+                <ul>
+                    <li><a href="#">筛选：</a></li>
+                    <li><a href="#">□有货</a></li>
+                    <li><a href="#">□包邮</a></li>
+                    <li><a href="#">□聚豆可抵</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="list-list">
+            <div id="list-container" class="list-container">
+            </div>
+            <script type="text/html" id="list-monopoly">
+                <ul class="list-ul">
+                    {{each list1 item}}
+                        <li>
+                            <a href="/html/detail.html?id={{item.id}}"><img src="{{item.image}}" alt=""></a>
+                            <p><a href="#">{{item.title}}</a></p>
+                            <p><span><a href="#">{{item.price}}</a></span></p>
+                        </li>
+                    {{/each}}
+                </ul>
+            </script>
+        </div>
+    </div>
+    <footer id="footer-container"></footer>
+<script src="../libs/requirejs/require.js" data-main="../js/list"></script>
+</body>
+</html>

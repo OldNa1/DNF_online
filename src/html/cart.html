@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车DNF</title>
+    <link rel="stylesheet" href="/css/cart.css">
+</head>
+<body>
+    <header id="header-container"></header>
+    <div class="no-shop" id="no-shop">
+        还没有商品哟，快去<a href="/html/list.html">逛逛</a>吧！
+    </div>
+    <div class="left" id="left">
+        <div class="list-header">
+            <input type="checkbox" class="allCheck" checked="checked">全选
+            <span>商品信息</span>
+            <i>单价(元)</i>
+            <b>数量</b>
+            <em>小计</em>
+            <p>操作</p>
+        </div>
+            <ul class="shop-list" id="shop-list"></ul>
+                <script type="text/html" id="cart-template">  
+                    {{each data item}}
+                    <li data-id="{{item.id}}">
+                        <input type="checkbox" class="check" checked="checked">
+                        <img src="{{item.imgs[0]}}">
+                        <div class="introduce">
+                            <h4><a href="/html/detail.html?{{item.id}}">{{item.title}}</a></h4>
+                            <p>颜色：彩色</p>
+                            <p>尺码：均码</p>
+                        </div>
+                        <div class="price">￥<span id="price">{{item.price1}}</span></div>
+                        <div class="num">
+                            <span class="reduceNum" id="reduceNum">-</span>
+                            <input type="text" value="{{item.num}}" class="inputNum">
+                            <span class="addNum" id="addNum">+</span>
+                        </div>
+                        <div class="subtotal">￥<span id="subtotal">{{item.price1*item.num}}</span></div>
+                        <div class="operate">
+                            <span class="delete" id="delete">删除</span>
+                            <span class="collect">收藏</span>
+                        </div>
+                    </li>
+                    {{/each}}
+                </script>
+
+            <div class="list-footer">
+                <div class="continue">
+                    <a href="/html/list.html">继续购物</a>
+                    总计：<span></span>
+                </div>
+                <div class="cleanCart" id="cleanCart">给钱不就完事了啊</div>
+            </div>
+    </div>
+    <div class="commened">
+        <h3 class="commened_h3">为您推荐</h3>
+        <div class="commened_com" id="commened_com">
+        </div>
+        <script type="text/html" id="list1-monopoly">
+            <ul class="commened_ul">
+                {{each list1 item}}
+                    <li>
+                        <a href="/html/detail.html"><img src="{{item.image}}" alt=""></a>
+                        <p><a href="#">{{item.title}}</a></p>
+                        <p><span><a href="#">{{item.price}}</a></span></p>
+                    </li>
+                {{/each}}
+            </ul>
+        </script>   
+    </div>
+    <footer id="footer-container"></footer>
+    <script src="/libs/requirejs/require.js" data-main="/js/cart.js"></script>
+</body>
+</html>
+<!-- <ul class="commened_ul">
+    {{each list1 item}}
+        <li>
+            <a href="/html/detail.html"><img src="{{item.image}}" alt=""></a>
+            <p><a href="#">{{item.title}}</a></p>
+            <p><span><a href="#">{{item.price}}</a></span></p>
+        </li>
+    {{/each}}
+</ul> -->
