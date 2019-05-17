@@ -50,7 +50,7 @@
             <div class="list-footer">
                 <div class="continue">
                     <a href="/html/list.html">继续购物</a>
-                    总计：<span></span>
+                    总计：￥<span class="allMoney"></span>
                 </div>
                 <div class="cleanCart" id="cleanCart">给钱不就完事了啊</div>
             </div>
@@ -58,18 +58,34 @@
     <div class="commened">
         <h3 class="commened_h3">为您推荐</h3>
         <div class="commened_com" id="commened_com">
-        </div>
-        <script type="text/html" id="list1-monopoly">
             <ul class="commened_ul">
-                {{each list1 item}}
-                    <li>
-                        <a href="/html/detail.html"><img src="{{item.image}}" alt=""></a>
-                        <p><a href="#">{{item.title}}</a></p>
-                        <p><span><a href="#">{{item.price}}</a></span></p>
-                    </li>
-                {{/each}}
+                <li>
+                    <img src="../images/手办.png" alt="">
+                    <p class="ul_p">卢克与贝齐礼盒</p>
+                    <span class="ul_span">￥250.00</span>
+                </li>
+                <li>
+                    <img src="../images/手办.png" alt="">
+                    <p class="ul_p">卢克与贝齐礼盒</p>
+                    <span class="ul_span">￥250.00</span>
+                </li>
+                <li>
+                    <img src="../images/手办.png" alt="">
+                    <p class="ul_p">卢克与贝齐礼盒</p>
+                    <span class="ul_span">￥250.00</span>
+                </li>
+                <li>
+                    <img src="../images/手办.png" alt="">
+                    <p class="ul_p">卢克与贝齐礼盒</p>
+                    <span class="ul_span">￥250.00</span>
+                </li>
+                <li>
+                    <img src="../images/手办.png" alt="">
+                    <p class="ul_p">卢克与贝齐礼盒</p>
+                    <span class="ul_span">￥250.00</span>
+                </li>
             </ul>
-        </script>   
+        </div> 
     </div>
     <footer id="footer-container"></footer>
     <script src="/libs/requirejs/require.js" data-main="/js/cart.js"></script>

@@ -171,6 +171,10 @@ a{
                     text-decoration: underline;
                 }
             }
+            span{
+                color: #ed3029;
+                font-size: 14px;
+            }
         }
         .cleanCart{
             margin-right: 70px;
@@ -178,11 +182,11 @@ a{
             line-height: 43px;
             height: 43px;
             color: #999;
-            font-size: 12px;
+            font-size: 18px;
             text-indent: 44px;
             &:hover{
                 text-decoration: underline;
-                color: red;
+                color: rgb(255, 0, 149);
             }
         }
     }
@@ -208,6 +212,19 @@ a{
                 width: 244px;
                 height: 326px;
                 background-color: aqua;
+                img{
+                    width: 244px;
+                    height: 233px;
+                }
+                .ul_p{
+                    height: 16px;
+                    line-height: 22px;
+                }
+                .ul_span{
+                    height: 24px;
+                    line-height: 26px;
+                    font-size: 24px;
+                }
             }
         }
     }

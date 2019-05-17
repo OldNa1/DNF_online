@@ -123,8 +123,8 @@ a{
         height: 365px;
         display: flex;
         justify-content: space-between;
-        li{
-           width: 278px;
+        .list_li{
+           width: 24%;
            height: 365px;
            text-align: center;
            a{

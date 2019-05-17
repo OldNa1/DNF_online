@@ -2,9 +2,9 @@ require(['require.config'], () => {
   require(['template', 'header', 'footer'], (template, header) => {
     class Cart {
       constructor () {
+        this.aCheck = document.querySelectorAll(".allCheck");
+        this.n = 0;
         this.init();
-        this.getType();
-        this.bindEvents();
       }
 
       init () {
@@ -17,19 +17,9 @@ require(['require.config'], () => {
           // 提示购物车为空
           alert('购物车为空，你也太没牌面了');
         }
-      }
-
-      getType () {
-        // ajax请求数据
-        $.get(url.rapBaseUrl+'list/type', data => {
-          if(data.res_code === 1) {
-            this.renderType(data.res_body.list1);
-          } 
-        })
-      }
-      renderType (list1) {
-        let html = template("list1-monopoly", { list1 });
-        $("#commened_com").html(html);
+        this.check = Array.from(document.querySelectorAll(".check"));
+        this.bindEvents();
+        this.allMoney();
       }
 
       render (cart) {
@@ -69,6 +59,7 @@ require(['require.config'], () => {
             localStorage.setItem('cart', JSON.stringify(cart));
           }
           header.calcCartNum();
+          this.allMoney();
         })
         // 给增加按钮添加绑定事件
         $("#left").on('click', '#addNum', (e) => {
@@ -93,6 +84,7 @@ require(['require.config'], () => {
             localStorage.setItem('cart', JSON.stringify(cart));
           }
           header.calcCartNum();
+          this.allMoney();
         })
         // 给删除按钮绑定事件
         $("#left").on('click', '#delete', (e) => {
@@ -115,7 +107,40 @@ require(['require.config'], () => {
             }
           }
           header.calcCartNum();
+          this.allMoney();
         })
+        // 给全选按钮绑定事件
+        $("#left").on('click', '.allCheck', () => {
+          this.check.forEach((item) => {
+            item.checked = this.aCheck.checked;
+          })
+          this.n = this.aCheck.checked ? this.check.length : 0;
+          this.allMoney();
+        })
+        this.check.forEach((check) => {
+          check.onchange = () => {
+            this.checkChange(check);
+          }
+        })
+      }
+      // 单选按钮方法
+      checkChange(check){
+        this.n += check.checked ? 1 : -1;
+        this.aCheck.checked = this.n === this.check.length;
+        this.allMoney();
+      }
+      // 计算总计金额
+      allMoney () {
+        let allPrice = 0;
+        let checks = Array.from(document.querySelectorAll(".check"));
+        checks.forEach(check => {
+          let price = check.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstChild.nextSibling;
+          // console.log(price);
+          if(check.checked){
+            allPrice += Number(price.innerHTML);
+          }
+        })
+        $(".allMoney").html(allPrice.toFixed(2));
       }
     }
     new Cart();
